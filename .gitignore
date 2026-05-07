@@ -11,3 +11,4 @@ dist/
 build/
 *.log
 .DS_Store
+target/

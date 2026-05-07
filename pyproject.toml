@@ -9,7 +9,30 @@ description = "Adversarial multi-agent framework for paper derivation and annota
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ name = "article-learning" }]
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = [
+    "paper",
+    "annotation",
+    "multi-agent",
+    "adversarial",
+    "llm",
+    "academic",
+    "derivation",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
 dependencies = [
     "langgraph>=0.2.40",
     "langchain>=0.3.0",
@@ -21,6 +44,12 @@ dependencies = [
     "tenacity>=8.2",
     "python-dotenv>=1.0.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/wuyouMaster/article-learning"
+Repository = "https://github.com/wuyouMaster/article-learning"
+Issues = "https://github.com/wuyouMaster/article-learning/issues"
+Documentation = "https://github.com/wuyouMaster/article-learning#readme"
 
 [project.optional-dependencies]
 pdf = [
@@ -35,6 +64,17 @@ dev = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/article_learning"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/",
+    "tests/",
+    "examples/",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "pyproject.toml",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

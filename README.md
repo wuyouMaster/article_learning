@@ -4,7 +4,7 @@ Adversarial multi-agent framework for **automatic paper derivation and
 annotation**. Two agent groups argue over every claim; whatever survives
 becomes a structured annotation.
 
-[![CI](https://github.com/wuyouMaster/article-learning/actions/workflows/ci.yml/badge.svg)](https://github.com/wuyouMaster/article-learning/actions/workflows/ci.yml)
+[![CI](https://github.com/wuyouMaster/article_learning/actions/workflows/ci.yml/badge.svg)](https://github.com/wuyouMaster/article_learning/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/article-learning.svg)](https://pypi.org/project/article-learning/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]()

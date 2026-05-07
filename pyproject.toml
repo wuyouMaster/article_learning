@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "article-learning"
-version = "0.2.0"
+version = "0.3.0"
 description = "Adversarial multi-agent framework for paper derivation and annotation"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -46,10 +46,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/wuyouMaster/article-learning"
-Repository = "https://github.com/wuyouMaster/article-learning"
-Issues = "https://github.com/wuyouMaster/article-learning/issues"
-Documentation = "https://github.com/wuyouMaster/article-learning#readme"
+Homepage = "https://github.com/wuyouMaster/article_learning"
+Repository = "https://github.com/wuyouMaster/article_learning"
+Issues = "https://github.com/wuyouMaster/article_learning/issues"
+Documentation = "https://github.com/wuyouMaster/article_learning#readme"
 
 [project.optional-dependencies]
 pdf = [

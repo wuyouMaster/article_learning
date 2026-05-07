@@ -2,7 +2,7 @@
 
 用于论文 **自动推导与批注** 的对抗式多 Agent 框架。两组 Agent 对每个论断争辩；通过对抗的结论会变成结构化批注。
 
-[![CI](https://github.com/wuyouMaster/article-learning/actions/workflows/ci.yml/badge.svg)](https://github.com/wuyouMaster/article-learning/actions/workflows/ci.yml)
+[![CI](https://github.com/wuyouMaster/article_learning/actions/workflows/ci.yml/badge.svg)](https://github.com/wuyouMaster/article_learning/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/article-learning.svg)](https://pypi.org/project/article-learning/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]()

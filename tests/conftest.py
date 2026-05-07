@@ -108,8 +108,7 @@ def deterministic_mock() -> DeterministicMockLLM:
                     "formal_statement": None,
                     "block_id": "block-3",
                     "citation_quote": (
-                        "If $f$ is continuous on $[0, 1]$, "
-                        "then $f$ is bounded on $[0, 1]$."
+                        "If $f$ is continuous on $[0, 1]$, then $f$ is bounded on $[0, 1]$."
                     ),
                     "depends_on": ["P1"],
                 },
@@ -120,8 +119,7 @@ def deterministic_mock() -> DeterministicMockLLM:
                     "formal_statement": None,
                     "block_id": "block-4",
                     "citation_quote": (
-                        "If $f$ is continuous on $[0, 1]$, "
-                        "then $\\int_0^1 f(x)\\,dx$ exists."
+                        "If $f$ is continuous on $[0, 1]$, then $\\int_0^1 f(x)\\,dx$ exists."
                     ),
                     "depends_on": ["P1", "P2"],
                 },

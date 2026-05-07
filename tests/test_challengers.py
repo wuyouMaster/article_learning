@@ -58,9 +58,7 @@ def test_no_issue_short_circuits_judging(sample_paper: Paper):
             type=PropositionType.LEMMA,
             statement="x",
             block_id=sample_paper.blocks[0].block_id,
-            citations=[
-                SourceCitation(block_id=sample_paper.blocks[0].block_id, quote="x")
-            ],
+            citations=[SourceCitation(block_id=sample_paper.blocks[0].block_id, quote="x")],
         )
     )
     challenger = LogicChallenger(mock)

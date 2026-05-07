@@ -84,7 +84,7 @@ class SemanticSegmenter:
         blocks: list[SemanticBlock] = []
         for idx, marker in enumerate(markers):
             end = markers[idx + 1].char_start if idx + 1 < len(markers) else len(markdown)
-            text = markdown[marker.char_start:end].strip()
+            text = markdown[marker.char_start : end].strip()
             if not text:
                 continue
             block_type = self._coerce_proof(marker, text)

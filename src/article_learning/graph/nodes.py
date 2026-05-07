@@ -71,9 +71,14 @@ def make_plan_node(agents: AgentBundle):
         paper = state["paper"]
         ctx = state.get("context") or AgentContext(paper_title=paper.title)
         bb = agents.main.plan(paper, ctx)
-        logger.info("Plan produced %d propositions, %d edges, cycles=%s",
-                    len(bb.propositions), len(bb.dag_edges), bb.cycles())
+        logger.info(
+            "Plan produced %d propositions, %d edges, cycles=%s",
+            len(bb.propositions),
+            len(bb.dag_edges),
+            bb.cycles(),
+        )
         return {"blackboard": bb, "context": ctx}
+
     return plan_node
 
 
@@ -96,6 +101,7 @@ def make_schedule_node():
             "blackboard": bb,
             "finished": False,
         }
+
     return schedule_node
 
 
@@ -112,6 +118,7 @@ def make_derive_node(agents: AgentBundle):
         for citation in result.extra_citations:
             prop.citations.append(citation)
         return {"blackboard": bb}
+
     return derive_node
 
 
@@ -130,14 +137,14 @@ def make_challenge_node(agents: AgentBundle):
         outcome = challenger.challenge(prop, state["paper"], bb, state["context"], history)
         logger.info(
             "Round %d challenger=%s verdict=%s",
-            state.get("current_round", 0), challenger_kind, outcome.verdict,
+            state.get("current_round", 0),
+            challenger_kind,
+            outcome.verdict,
         )
 
         round_idx = state.get("current_round", 0) + 1
         verdict_str = (
-            "pending"
-            if outcome.verdict == ChallengeVerdict.QUESTION
-            else outcome.verdict.value
+            "pending" if outcome.verdict == ChallengeVerdict.QUESTION else outcome.verdict.value
         )
         record = ChallengeRecord(
             proposition_id=prop_id,
@@ -157,6 +164,7 @@ def make_challenge_node(agents: AgentBundle):
             "current_round": round_idx,
             "challenger_index": cycle_idx + 1,
         }
+
     return challenge_node
 
 
@@ -181,6 +189,7 @@ def make_respond_node(agents: AgentBundle):
             prop.citations.append(citation)
         bb.resolve_question(prop_id, outcome.question)
         return {"blackboard": bb, "pending_answer": result.answer}
+
     return respond_node
 
 
@@ -254,6 +263,7 @@ def make_judge_node(agents: AgentBundle):
         prop.touch()
 
         return {"blackboard": bb}
+
     return judge_node
 
 
@@ -269,9 +279,12 @@ def make_annotate_node():
         annotation = _annotate(prop, bb, state)
         logger.info(
             "Annotation: %s confidence=%s rounds=%d",
-            prop.proposition_id, annotation.confidence, annotation.rounds,
+            prop.proposition_id,
+            annotation.confidence,
+            annotation.rounds,
         )
         return {"annotations": [annotation]}
+
     return annotate_node
 
 

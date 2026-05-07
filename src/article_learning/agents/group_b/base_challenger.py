@@ -151,7 +151,7 @@ class BaseChallenger(BaseAgent):
             f"Target proposition {prop.proposition_id}: {prop.statement}\n"
             f"Sub-agent's derivation:\n{prop.derivation or '(none)'}\n\n"
             f"Source block ({block.block_id}):\n"
-            f"\"\"\"\n{block.text}\n\"\"\"\n\n"
+            f'"""\n{block.text}\n"""\n\n'
             f"Dependencies:\n{deps}\n\n"
             f"Prior challenge rounds:\n{prior}\n"
         )

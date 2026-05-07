@@ -136,7 +136,7 @@ def _render_derivation_user(
         f"  {prop.statement}\n"
         f"Formal: {prop.formal_statement or '(n/a)'}\n\n"
         f"Source block ({block.block_id}, {block.block_type.value}):\n"
-        f"\"\"\"\n{block.text}\n\"\"\"\n\n"
+        f'"""\n{block.text}\n"""\n\n'
         f"Dependencies (already verified):\n{deps}\n\n"
         f"Symbol table in scope:\n{syms}\n"
     )
@@ -165,7 +165,7 @@ def _render_response_user(
         f"Proposition {prop.proposition_id}: {prop.statement}\n"
         f"Your prior derivation:\n{prop.derivation or '(none yet)'}\n\n"
         f"Source block ({block.block_id}):\n"
-        f"\"\"\"\n{block.text}\n\"\"\"\n\n"
+        f'"""\n{block.text}\n"""\n\n'
         f"Prior rounds:\n{history_str}\n\n"
         f"Current challenger question:\n{question}\n"
     )

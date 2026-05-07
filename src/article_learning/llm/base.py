@@ -41,8 +41,7 @@ class LLMClient(Protocol):
         temperature: float = 0.0,
         json_mode: bool = False,
         max_tokens: int | None = None,
-    ) -> LLMResponse:
-        ...
+    ) -> LLMResponse: ...
 
 
 def parse_json_response(response: LLMResponse, schema: type[T]) -> T:

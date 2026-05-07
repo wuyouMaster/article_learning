@@ -28,8 +28,7 @@ class BaseAgent(ABC):
         self.llm = llm
 
     @abstractmethod
-    def system_prompt(self) -> str:
-        ...
+    def system_prompt(self) -> str: ...
 
     def _wrap(self, system: str, user: str) -> list[ChatMessage]:
         tag = f"[AGENT:{self.name}]"

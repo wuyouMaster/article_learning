@@ -142,8 +142,11 @@ class MainAgent(BaseAgent):
         prop_ids: list[str] = []
         for draft in plan.propositions:
             if draft.block_id not in block_ids:
-                logger.warning("Skipping proposition %s with unknown block %s",
-                               draft.proposition_id, draft.block_id)
+                logger.warning(
+                    "Skipping proposition %s with unknown block %s",
+                    draft.proposition_id,
+                    draft.block_id,
+                )
                 continue
             citation = SourceCitation(
                 block_id=draft.block_id,
